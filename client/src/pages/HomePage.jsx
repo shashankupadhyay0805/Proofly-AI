@@ -52,7 +52,7 @@ export function HomePage() {
           }
         />
 
-        <div className="mt-5 grid gap-4">
+        <div className="mt-4 grid gap-4 sm:mt-5">
           <div className="grid gap-3 md:grid-cols-2">
             <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-indigo-50 to-fuchsia-50 p-4 dark:border-slate-800/70 dark:from-indigo-950/40 dark:to-fuchsia-950/30">
               <div className="text-sm font-semibold text-slate-900 dark:text-slate-100">Choose a topic</div>
@@ -79,10 +79,10 @@ export function HomePage() {
             </div>
 
             <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800/70 dark:bg-slate-950/50">
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
                 <div className="text-sm font-semibold text-slate-900 dark:text-slate-100">Get a practice problem</div>
                 <select
-                  className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-800/70 dark:bg-slate-950/40 dark:text-slate-100"
+                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-800/70 dark:bg-slate-950/40 dark:text-slate-100 sm:w-auto"
                   value={difficulty}
                   onChange={(e) => setDifficulty(e.target.value)}
                 >
@@ -134,8 +134,9 @@ export function HomePage() {
             />
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="grid gap-3 sm:flex sm:flex-wrap">
             <Button
+              className="w-full sm:w-auto"
               variant="primary"
               onClick={() => {
                 localStorage.setItem('adaptiveTutor.problem', problem)
@@ -146,10 +147,10 @@ export function HomePage() {
             >
               Start tutoring
             </Button>
-            <Button variant="dark" onClick={() => navigate('/quiz')}>
+            <Button className="w-full sm:w-auto" variant="dark" onClick={() => navigate('/quiz')}>
               Play math quiz
             </Button>
-            <Button variant="secondary" onClick={() => navigate('/dashboard')}>
+            <Button className="w-full sm:w-auto" variant="secondary" onClick={() => navigate('/dashboard')}>
               View dashboard
             </Button>
           </div>

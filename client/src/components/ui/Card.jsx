@@ -2,7 +2,7 @@ export function Card({ children, className = '' }) {
   return (
     <section
       className={[
-        'rounded-2xl border border-slate-200/70 bg-white/80 p-6 shadow-sm backdrop-blur',
+        'rounded-2xl border border-slate-200/70 bg-white/80 p-4 shadow-sm backdrop-blur sm:p-6',
         'dark:border-slate-800/70 dark:bg-slate-950/50',
         className,
       ].join(' ')}
