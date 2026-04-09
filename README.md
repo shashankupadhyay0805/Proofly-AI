@@ -7,12 +7,29 @@ Production-style full-stack app that simulates a real math tutor:
 - detects **mistake types**
 - shows **learning analytics** and a **basic adaptive difficulty** recommendation
 
+## Screenshots
+
+### Home — topic selection and practice problem
+
+![Proofly AI home: choose a topic, suggest a problem, and edit the problem text](docs/screenshots/home.png)
+
+### Tutor — step-by-step coaching
+
+![Proofly AI tutor: problem statement, chat, step input, math keyboard, hints, and session settings](docs/screenshots/tutor.png)
+
+### Quiz — timed arithmetic practice
+
+![Proofly AI quiz: configure difficulty, number of questions, and time limit](docs/screenshots/quiz.png)
+
+_Images are stored under [`docs/screenshots/`](docs/screenshots/) for version control-friendly links in this README._
+
 ## Folder structure
 
 ```
 CueMath/
   client/                 # React (Vite) + Tailwind + Recharts
   server/                 # Express + MongoDB + Groq AI
+  docs/screenshots/       # README screenshots
 ```
 
 ## Backend (Express + Mongo + Groq)
